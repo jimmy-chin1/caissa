@@ -1,0 +1,16 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: CI/CD
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Check out repository
+        - uses: actions/checkout@v6
