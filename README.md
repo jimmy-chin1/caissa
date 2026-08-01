@@ -1,5 +1,7 @@
 # Caissa
 
+### Status: Early development. The initial PGN analysis prototype is currently being implemented.
+
 Caissa is a personalised chess coach that analyses PGN games with Stockfish and transforms a player's mistakes into interactive training puzzles.
 
 ## Project Goal
