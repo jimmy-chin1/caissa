@@ -1,10 +1,12 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
 [build-system]
 requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
 name = "caissa"
-dynamic = ["version"]
+version = "0.1.0"
 requires-python = ">= 3.13"
 authors = [
   {name = "Jimmy Chin"},
@@ -13,9 +15,7 @@ maintainers = [
   {name = "Jimmy Chin"}
 ]
 description = "Caissa is an intelligent chess platform for playing, analysing, and improving your game."
-readme = "README.md"
 license = "MIT"
-license-files = ["LICEN[CS]E*, AUTHORS.md"]
 keywords = ["chess", "stockfish", "pgn", "chess-puzzles", "personalized-learning"]
 classifiers = [
   "Development Status :: 1 - Planning",
@@ -27,13 +27,10 @@ classifiers = [
 [project.urls]
 Repository = "https://github.com/jimmy-chin1/caissa"
 "Bug Tracker" = "https://github.com/jimmy-chin1/caissa/issues"
-Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+Changelog = "https://github.com/jimmy-chin1/caissa/blob/main/CHANGELOG.md"
 
 [project.scripts]
-caissa = "caissa.backend.main:main"
+caissa = "app.main:main"
 
-[project.gui-scripts]
-caissa = "caissa.backend.main:main"
-
-[project.entry-points."caissa.backend"]
-caissa = "caissa:main"
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
